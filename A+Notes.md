@@ -1,0 +1,1083 @@
+# Page of Notes
+## Objective 1.1 Laptop Hardware
+- Laptops, Repairing, Understand the process
+    - Battery Replacement (Lithium-Ion)
+    - Different battery form factors (ensure compatability)
+    - Keyboard Replacement (Ribbon Cables)
+    - Replacing single keycaps on laptops are fragile
+    - SO-DIMM (Small Outline Dual In-line) memory used in laptops
+    - HDD or SSD (HDD is Ancient Technology) M.2 is king
+    - Cloning one Storage device to another with imaging
+    - 802.11 (LAN, Highspeed, Internet access)
+    - Bluetooth (Pan (Personal Area Network) Short range, connects peripherals) wires below laptop display are usually the Aux and 802.11 wires for Bluetooth and Network connectivity
+    - NFC (Near Field Communication) apple pay
+## Objective 1.2 Mobile Devices
+- Mobile Devices
+    - USB (Universal Serial Bus)
+        - USB-A
+        - USB-C
+            - 24-Pin double-sided USB Connector
+            - Acts as a 2.0/3.0/3.1/4 USB connection
+            - Provides battery charge, display, and data transferring
+        - Lightning
+            - 8-Pin connector
+            - Iphone, Ipad, macbook
+            - Faster Charging
+            - inserted anyway
+    - NFC Built into your phone
+    - Bluetooth (PAN (Personal Area Network))
+    - Hotspot
+    - Digital Stylus
+        - Writing tool
+        - Bluetooth
+    - Headsets
+    - Wireless, wired 
+    - 3.5mm jack TRRS (Tip, Ring, Ring, Sleeve)
+    - Speakers or mobile audio
+    - Camera, webcam
+    - Docking station (allows you to use laptop as a computer)
+    - Port replicator 
+        - multiple USB connections
+        - USB-C connections
+        - RJ45 connections
+    - Trackpad
+    - Drawing pad
+## Objective 1.3 Mobile Device Managment and Networks
+- Mobile Device Networks
+    - Cell phones
+        - Seperates land into cells
+        - Airplane mode disables the phone from connecting to these cellular towers
+    - 3G Technology
+        - 1998
+        - GPS
+        - Mobile television
+        - Video on demand
+        - Video conferencing
+    - 4G and LTE (Long Term Evolution)
+        - 2010s
+        - GSM (Global System for Mobile Communication) and EDGE (Enhanced Data Rates for GSM Evolution)
+        - 150 Mbit
+        - LTE-A upgradted to 300 Mbit
+    - 5G 
+        - 2020s
+        - 10 Gb persecond 
+        - Slower speeds 100-900 Mbit
+        - Faster and many more uses due to speed.
+    - 802.11 Local network
+        - Data access for email and internet
+        - Higherspeed not celluar use
+        - LAN
+        - Can support voice communication
+    - Hotspot
+        - Turn your phone into a mobile wifi spot
+        - depends on phone type and carrier
+    - SIM (Subscriber Identity Module)
+        - Unique Identifier for Cellular Devices
+        - Contains information for the carrier and user (Phone number, contacts, messages)
+        - eSIM (embedded SIM)
+    - Bluetooth pairing
+        - Connect bluetooth device (Enable bluetooth for both devices or items)
+    - GPS (Global Positioning System)
+        - Location and directions
+        - Created by the US Government
+    - MDM (Mobile Device Management)
+        - BYOD 
+        - User owned mobile devices
+        - Control functionality
+        - set up partioned area on someones personal phone for work related information
+    - BYOD
+        - Data protection
+    - COPE (Corporate Owned Personally Enabled)
+        - Company owns the device
+        - Used as both a corporate device and personal
+        - Organization keeps full control
+        - Information protected
+        - CYOD (Choose Your Own Device)
+    - IMEI (Unique Identifier)
+    - MDM (Mobile Device Management) Console
+        - Has access to specs, general information, and features that enabled and disabled
+        - MDM can control functionality
+## Objective 2.1 Introduction to IP
+- Networking Domain
+- Series of moving vans
+    - Network is the road
+    - Truck is the moving IP
+        - We have designed the roads for this truck
+    - Boxes in the truck are your data
+    - inside boxes are more information that we want to transfer
+    - Encapsulation - Decapsulation
+    - TCP & UDP
+        - OSI Layer 4 (Transport Layer)
+        - Two Ways to move data from place to place
+        - Uses many different applications at the same time
+        - Multiplexing
+        - any port between 1024 and 65535
+    - TCP (Transmission Control Protocol)
+        - Connection-Oriented
+        - Reliable Delivery
+            - Recovery from errors
+            - Can manage out-of-order messages or retransmissions
+        - Flow Control
+            - Reciever can manage how much data is sent
+        - HTTPS (Hyper Text Transfer Protcol Secure)
+        - SSH (Secure Shell)
+        - TCP confirms data was recieved
+    - UDP (User Datagram Protocol)
+        - Connectionless
+        - Unreliable
+            - No error recovery
+        - No flow control
+        - Low overhead
+        - video and voice transfer (Voicemail, phonecalls)
+        - DHCP (Dynamic Host Configuration Protocol)
+        - TFTP (Trivial File Transfer Protocol)
+        - If data doesnt get through it might just fall through and do nothing
+- IP Address (Trucking heading to Address)
+- Rooms (Kitchen, Restroom, Bedroom, Living Room) are all different _Ports_
+- Boxes have the ports and go to the specific "Room(s)"
+- Ports 0 to 1023 (Commonly used and Permanent for programs)
+    - Usually a server or service
+    - True permanent ports
+- Ports 1024 to 65535 (Single use connections)
+    - mixed, some are common ports and some arent used at all
+    - local dev 3001, 8008
+    - lots of free range
+- _Common Ports_
+    - Firewall configuration
+    - Well Known ports
+    - Understand Port Number, Protocol, and how it is used
+    - (FTP 20/21) File Transfer Protocol
+        - TCP 20 (Active mode data)
+        - TCP 21 (control)
+        - Transfer files between systems
+        - List, Add, Delete, etc
+    - (SSH 22) Secure Shell
+        - TCP 22
+        - Encryption
+    - (Telnet 23) 
+        - TCP 23
+        - Login to devices remotely
+        - Not the best choice
+        - No Encryption
+    - (SMTP 25) Simple Mail Tranfer Protocol
+        - TCP 25
+        - Email (server1 -> mail -> server2)
+        - IMAP
+        - POP3
+    - (DNS 53) Domain Name System
+        - UDP 53 
+        - Single use assignment
+        - DNS Servers allocate the IP address to a human readable name
+    - (DHCP 67/68) Dynamic Host Configuration Protocol
+        - UDP 67, UDP 68
+        - Configures IP Addresses, subnet mask and more
+        - Happens Automatically
+        - Requests IP address
+        - Admins can manually configure with DHCP
+    - (HTTP & HTTPS 80/443) Hyper Text Transfer Protocol (Secure)
+        - TCP 80 HTTP
+        - TCP 443 HTTPS
+    - (POP3 110) Post Office Protocol Version 3
+        - TCP 110
+        - basic mail transfer
+    - (IMAP4 143) Internet Message Access Protocol Version 4
+        - TCP 143
+        - Includes management of email inbox from multiple clients 
+        - newer and more functional and controllable
+    - (SMB 137/139) Server Message Block
+        - UDP 137 NetBIOS name Services
+        - TCP 139 NetBIOS session Service
+        - TCP 445 NetBIOS-LESS
+            - Direct SMB communication over TCP without NetBIOS
+    - (SNMP 161) Simple Network Management Protocol
+        - UDP 161
+        - Packet Capture
+    - (LDAP 389) Lightweight Directory Access Protocol
+        - TCP 389
+        - Store and retreive information
+        - Commonly used in Microsoft Active Directory
+    - (RDP 3389) Remote Desktop Protocol
+        - TCP 3389
+        - Share desktop remotely
+        - Windows Devices
+        - Iphone, Android, Linux, Unix all have RDP functionality
+## Objective 2.2 Wireless Network Technologies
+- IEEE Standards (Institue of Electrical and Electronic Engineers)
+    - 802.11 Committee
+    - 802.11ac (WiFi 5)
+    - 802.11ax (WiFi 6 and WiFi 6E (Extended))
+    - 802.11be (WiFi 7)
+    - Different Frequencies (2.4GHz, 5GHz, 6GHz)
+    - Bandwidth (20MHz, 40MHz, 80MHz, 160MHz)
+    - Bluetooth uses Unlicensed ISM (Industrial Scientific and Medical) band 2.4GHz
+    - RFID (Radio Frequency Identification)
+    - NFC (Near Field Communication)
+## Objective 2.3 Network Services
+- DNS Server
+    - Convert names to IP addresses
+    - Load balanced across many different servers
+    - Managed by ISP
+- DHCP Server
+    - Automatic IP address configuration
+    - Available on most home routers
+- File share
+    - Centralized storage of documents for sharing internally
+    - Usually a standard system of file management
+        - SMB, Apple OS (AFP)
+- Print Server
+    - Connect a printer to the network (Provides printing services)
+    - Computer is connected to printer
+    - Printer has ability to connect to devices
+    - Standard printing protocols
+        - SMB (Server Message Block)
+        - IPP (Internet Printing Protocol)
+        - LPD (Line Printer Daemon)
+- Mail Server
+    - Send outgoing mail
+    - Managed by ISP
+    - Important Service
+- Syslog
+    - Central Logging receiver
+    - Integrated into a SIEM
+    - Security Information and Event Manager
+- Web Server
+    - Responds to HTTP/HTTPS protocol requests
+    - Web Pages are stored on the server
+        - Downloaded to the browser
+- Authentication Server
+    - Triple AAA Server
+    - Login Server
+    - Not required for Home networks
+    - provides high level of security
+    - Multiple authentication serveers
+- Database Servers
+    - Save information
+    - SQL databases
+- NTP (Network Time Protocol) Server
+    - Encryption, Logins, Backups, Log Timestamps
+    - Everything needs to work from the same clock
+    - NTP Server responds to NTP Client
+- Spame Gateways
+    - Cloud server
+    - Determines spam
+    - not always accurate
+- All in one Security appliance 
+    - Next gen Firewall
+    - URL filter / Content Inspection
+    - Malware inspection
+    - Spam Filter
+    - CSU/DSU (For connecting to older WAN connections)
+    - Router, Switch 
+    - Firewall
+    - IPS/IDS
+    - Bandwidth shaper
+    - VPN endpoint
+- Load Balancers
+    - Distribute the load
+- Proxy Server
+    - Security tool
+    - Insepcts incoming traffic and verifies no vulnerabilities 
+- SCADA (Supervisory Control and Data Acquisition System) / ICS (Industrial Control System)
+    - PC manages equipment
+    - Large heavy machinery companies utilize scada most likley 
+    - No Access from the outside
+    - Access is controlled through very limited access systems
+- Legacy Systems
+    - Really old
+    - Really important
+    - Purpose Built Device
+- IOT Devices
+    - Appliances
+    - Smart Devices
+    - Doorbells, Fridges, windows
+## Objective 2.4 DNS Configuration
+- DNS (Domain Name System)
+    - DNS supplies IP address with human readable text
+    - DNS Database allows us to find any IP on the internet today
+    - Hundreds of gTLDs (Generic Top Level Domains)
+- _nslookup_ for windows
+- Changing DNS servers are scary
+- A records
+    - IPV4 addresses
+- AAAA records
+    - IPV6 addresses
+- CNAME (Canonical name Records)
+    - One physical server, multiple services
+- MX (Mail Excahnge) records
+    - Determines the host name for the mail server
+- TXT (Text Records)
+    - Informal Information
+    - Barely used
+    - nslookup -type=txt google.com
+- DKIM (Domain Keys Identified Mail)
+    - Email Authentication method, verifies the message came from the domain it claims to have come from
+    - Email Protocol/Standard
+- SPF (Sender Policy Framework)
+    - A list of all servers authorized to send emails for this domain
+    - prevents mail spoofing
+    - Verifies message came from an authorized host
+    - Email Protocol/Standard
+- DMARC (Domain-Based Message Authentication, Reporting, and Conformance)
+    - Prevents unauthorized email use
+    - Extension of SPF and DKIM
+    - Email Protocol/Standard
+- DHCP (Dynamic Host Configuration Protocol)
+    - Created in 1997
+    - Assigns mostly anything
+    - Would be close to impossible to assign all manually
+- DORA
+    - Discover
+    - Offer
+    - Request
+    - Acknowledge
+- DHCP Scope
+    - Configured on the DHCP Server
+    - IP address range
+    - Subnet mask
+    - DNS Server
+    - Default gateway
+    - VOIP Servers
+- DHCP Pools
+    - List of available IP addresses
+- Address reservation
+    - Administratively configured
+    - MAC Address identified usually
+    - ipconfig //all 
+- LANs (Local Area Network)
+    - Have to be within the local area
+- VLAN (Virtual LAN)
+    - Group of devices on the same broadcast domain
+    - Separated logically not physically
+- VPNS (Virtual Private Network)
+    - Encrypted data traversing a public network
+    - Encryption / decryption
+- Client-to-site VPN
+    - Software connects to a VPN Concentrator
+    - Always on config, automatically creates a secure network connection to company tools
+- Firewalls act as VPN Concentrator
+## Objective 2.5 Network Devices
+- Network Devices
+    - Routers
+        - Forwarding decisions based on IP Address
+        - Routers inside switches are called Layer 3 switches
+        - LAN, WAN, copper, Fiber
+    - Switches
+        - Bridges hardware
+        - POE (Power over Ethernet) Power phones, or send data
+    - Unmanaged Switches
+        - Plug and play devices
+        - NO VLANS
+        - Low Price
+    - Managed Switch
+        - VLAN Functionality
+        - Traffic Prioritization
+        - Redundancy support
+        - Capture packets (Port mirroring)
+    - Access Point
+        - A bridged communication
+        - Makes forwarding decisions based on the MAC address
+    - Cable Infrastructure
+        - patch panel
+            - RJ45 Connectors
+        - Permanent connections
+            - With ease to replace
+    - Firewalls
+        - Filters traffic by port number
+        - OSI Layer 4 (TCP/UDP)
+        - VPN Concentrator
+        - Proxy
+        - Large firewalls have lots of functionability 
+    - POE (Power over Ethernet)
+        - One wire for both network and electricity
+        - POE+ (Power higher power stuff) 25W
+        - POE++ 51W, 71.3W
+    - Cable modem
+        - Broadband
+            - Transmisson across multiple frequencies
+        - Data on the cable network
+            - DOCSIS (Data Over Cable Service Interface Specification)
+    - DSL Modem (Digital Subscriber Line)
+        - 10,000 FT limitation
+    - ONT (Optical Network Terminal)
+        - Fiber
+        - Connect to ISP Fiber network
+    - NIC (Network Interface Card)
+        - Every device on the network has a NIC
+        - Specific to network type
+        - Often built into the Motherboard
+## Objective 2.6 IPV4 & IPV6
+- IPV4 
+    - Primary for a lot of applications and services
+    - 32 Bits - 32 integers
+    - OSI Layer 3 Address
+    - 0 to 255
+    - 4.29 billion only networks available
+- IPV6 
+    - Now part of all major operating systems
+    - Backbone of our infrastructure
+    - 128 Bits in addresses
+    - 340 undecillion addresses
+    - DNS Becomes more important 
+    - First 64 bits is generally the network prefix
+- NAT (Network Address Translation)
+    - Properly design and scale large networks
+    - 10.0.0.0 - 10.255.255.255 - Class A - 24 Bits
+    - 172.16.0.0 - 172.31.255.255 - Class B - 20 Bits
+    - 192.168.0.0 - 192.168.255.255 - Class C - 16 Bits
+- Unique IP Addresses must be assigned
+- Subnet mask (255.255.255.0) <- Example
+    - isnt usally transmitted
+    - Default Gateway (192.168.1.1) <- Example
+- Static IP Address
+    - Type in manually
+    - Can be difficult to manage
+    - Avoid
+- APIPA (Automatic Private IP Addressing)
+    - IPV4 Link-Local Address
+    - 169.254.0.0 - 169.254.255.255
+## Objective 2.7 Internet Connection Types
+- Satellite Networking
+    - Non-Terrestrial communication
+    - So far it adds latency
+    - 250 ms for regular
+    - Starlink advertises 25 to 60 ms
+- Fiber
+    - High Speed data communication
+- Cable
+    - Transmisson across multiple frequencies
+- DSL (ADSL) Asymmeetric Digital Subscriber Line
+    - 200 Mbit downstream 20 Mbit upstream
+    - 10,000ft limitation
+    - Farther you are, Slower it will be
+- Cellular Networks
+    - Seperates land into Cells
+    - Covers large areas
+- WISP (Wireless Internet Service Provider)
+    - Terrestrial Internet access using wireless
+    - Needs atenna
+    - Speed 10 to 1000 mb per second
+- LAN (Local Area Network)
+    - Close area
+    - High speed
+- WAN (Wide Area Network)
+    - Slower
+    - Point to point serial connections
+    - Terrestrial and non-terrestrial
+- PAN (Personal Area Network)
+    - NFC
+    - Bluetooth
+    - Audio mostly
+- MAN (Metropolitan Area Network)
+    - Large City networks
+    - Government controlled
+- SAN (Storage Area Network)
+    - Transfer Large amounts of data
+    - Fast and efficient (Needs to be)
+- WLAN (Wireless LAN)
+    - Mobility
+    - Expand Coverage
+## Objective 2.8 Network Tools
+- Cable Crimper
+    - Pinch end of cable to RJ45
+- WiFI Analyzer
+    - Avoids operating system limitations
+    - View all of the 802.11 information in the air
+    - View WiFi Information
+    - Spectrum Analyzer
+- Tone Generator 
+    - Toner Probe
+    - Locate wires
+- Punch Down Tool
+    - Punch Down block
+    - Connect Wires
+    - Trim wires
+    - Clean Installation
+    - Document everything
+- Cable tester
+    - Continuity Test
+    - Wire map
+    - Identifiy missing pins
+- Loopback plugs
+    - Testing physical ports
+    - Tests for looping
+- Taps and port mirrors
+    - Physical Taps
+    - Disconnecting link and putting a passive active tap
+    - Port Mirror
+    - SPAN (Switched Port analyzer) -> same thing easier
+    - limited but works well in a pinch
+## Objective 3.1 Display Types
+- LCD (Liquid Crystal Display)
+    - Light shines through the liquid crystals
+    - Mostly use LEDs (Light Emitting Diode), some can be Florescent
+    - Advantages
+        - Lightweight
+        - commonly Low power
+        - commonly inexpensive
+    - Disadvantages
+        - Black levels (Black Screens appear more purple blue) are a challenge
+        - requires separate backlight
+        - Sometimes repairable, mostly not
+- TN (Twisted Nematic) LCD
+    - Original LCD Technology
+    - Fast response times (This and everything created after is great for gaming LCD sucks)
+    - Poor viewing angles
+- IPS (In Pane Switching) LCD
+    - Excellent Color representation
+    - More Expensive than TN
+- VA (Vertical Alignment) LCD
+    - Good compromise between TN and IPS
+    - Good Color representation
+- OLED (Organic Light Emitting Diode)
+    - Organic Compound emits light
+    - No backlight
+    - Thinner and lighter
+    - True dark black screen (dynamically turns off light when a black screen is being displayed)
+    - Tablets, Phones, Smart watches
+- Mini LED backlight
+    - Same backlight technology as a conventional LED-backlit LCD
+    - Each LED can be enabled or disabled
+    - Much better control over dark screen areas
+- Touchscreen
+    - Digitizer responds to touch
+    - No keyboard needed
+    - many options for input
+- Digitizer
+    - Use a pen-like device as input
+    - Used commonly on laptops / tablets
+- Backlight and inverter
+    - LCD displays need a backlight
+    - Some laptops have inverters (Turns DC into AC)
+    - Shine light at monitor if you think its turned on and backlight broken
+- Display attributes
+    - Not all displays are created equal
+- Picking the display for the use is important
+- Pixel Density (Higher the better)
+- Pixel Density is important for knowing how prints will turn out 
+- DPI (Dots per Inch)
+- 4K (3840 Pixel Count) Divide by the size of the display to find the pixels per inch
+- Hz (Hertz)
+    - Refresh Rate 60Hz, 100Hz, 144Hz, 240Hz
+- FPS (Frames Per Second)
+- Screen Resolution
+    - Higher the pixels the better the display
+- Color Gamut
+    - The range of colors available on a display or output device
+    - Many Standards
+    - Better results equals better looking monitors (Higher Percentages)
+## Objective 3.2 Network Cables
+- Fundamental to network communication
+- Usually only one good opportunity to wire a building, cant redo work its too expensive
+- Twisted Pair Copper Cabling
+    - Balanaced Pair operation
+        - Transmit+, Transmit- / Receive+, Receive-
+    - The Twists are purposefuly to avoid interference with other entities or eachother
+- Minimun cable category for 1000BASE-T is Cat5
+- Cat5
+    - 1000BASE-T
+    - 100 Meters
+- Cat5e (Enhanced)
+    - 1000BASE-T
+    - 100 Meters
+- Cat6
+    - 10GBASE-T 
+    - Unshielded: 55 Meters
+    - Shielded: 100 Meters
+- Cat6A (Augmented)
+    - 10GBASE-T
+    - 100 Meters
+- Coaxial Cables
+    - Inner conductor and outer shield
+    - RG-6 used in television/digital cable
+    - High-speed internet over cable
+- UTP (Unshielded Twisted Pair)
+    - Common
+- STP (Shielded Twister Pair)
+    - Protects against interference
+    - Shields each pair and overall cable
+    - Requires the cable to be grounded
+- Looking at the outside of the cable tells you which type
+    - U = Unshielded
+    - S = Braided Shielding
+    - F = Foil Shielding
+- Direct Burial STP cables
+    - Cables last longer when buried
+    - Provides protection
+    - Shielded Twister Pair
+    - Provides Grounding
+- No Plenum
+    - Dead / Non-circulating Airspace
+- Plenum
+    - Active / Circulating Plenum Airspace
+    - Fire hazards
+- Plenum-Rated Cable
+    - Traditional Cable Jackets PVC (Polyvinyl Chloride) These are not Plenum Cables
+    - Fire-rated cable jacket
+        - Fluorinated ethylene polymer (FEP) 
+        - Not flexible and harder to work with
+        - Worst case planning
+- Structured Cabling standards
+    - TIA (Telecommunications Industry Association)
+    - T568A Color Scheme
+        - White & Green
+        - Green
+    - T568B Color Scheme
+        - White & Orange
+        - Orange
+        - many organizations commonly use 
+    - Different pin assignments for 8P8C connectors
+- Fiber Communication
+    - Transmission by light
+    - Difficult to monitor
+    - Slow degrade
+    - Immunue to radio Interference
+    - Light bounces back and fourth inside cable to reach destination 
+        - Buffer Coating
+            - Cladding
+                - Core
+                    - Light Ray
+- Multimode fiber
+    - Short range
+    - 2KM
+    - Inexpensive
+- Single mode fiber
+    - Long Range
+    - 100KM
+- USB (Universal Serial Bus)
+    - Simple connection
+    - USB 1.1
+        - LowSpeed 1.5 megabits, 3 meters
+        - FullSpeed 12 megabits, 5 meters
+    - USB 2.0
+        - 480 megabits, 5 meters
+    - USB 3.0
+        - SuperSpeed
+        - 5 gigabits, 3 meters
+        - does not specify a cable length
+    - USB 3.1 
+        - 10 gigabits
+    - USB 3.2
+        - 20 gigabits
+    - USB-C
+        - Replaces everything
+        - Super fast and does everything
+- Serial Cable
+    - DB-9, Integer refers to pin count
+    - DB-25, Integer refers to pin count
+    - Was used all the time back in the day for everything
+    - Now used as a configuration port
+- Thunderbolt
+    - Data and power
+    - Mini DP (Display Port)
+- Thunderbolt 1
+    - 10Gbit
+    - 20Gbit total throughput
+    - Mini DP (Display Port)
+- Thunderbolt 2
+    - 20Gbit
+    - Mini DP (Display Port)
+- Thunderbolt 3
+    - 40Gbit
+    - USB-C 
+    - Max 3 Meters
+    - Good at daisy chaining (6 devices)
+- Thunderbolt 4
+    - 40Gbit
+    - Supports up to 4K
+- HDMI (High-Definition Multimedia Interface)  
+    - Video and Audio
+    - 20 Meter range
+    - 19 pin
+    - Common
+- Display Port
+    - Video and Audio
+    - Best one
+- DVI (Digital Video Interface)
+    - Single and Dual link
+        - Single : 3.7Gbps
+        - Dual : 7.4Gbps
+- DVI-A
+    - Analog
+    - Compaitable with VGA
+- DVI-D
+    - Digital Signals
+- DVI-I
+    - Integrated - Digital and Analog in same connector
+- VGA (Video Graphics Array)
+    - DB-15 Connector
+    - Blue Color
+    - Video Only
+    - Analog Signal
+- SATA (Serial AT Attachment)
+    - AHCI (Advanced Host Controller Interface) Moves data from and to the drive
+    - SATA Revision 1.0
+        - 1.5Gbit
+    - SATA Revision 2.0
+        - 3.0Gbit
+    - SATA Revision 3.0
+        - 6.0Gbit
+    - SATA Revision 3.2
+        - 16Gbit
+    - eSATA (External)
+        - Connecting external drive
+    - Power (15 Pins)
+    - Data (7 Pins)
+- Adapters and converters
+    - important 
+    - Can sometimes be permanent lol
+- RJ11 (Registered Jack 11)
+    - 6 Position, 2 Conductor (6P2C)
+    - Telephone or DSL connection
+- RJ45 (Registered Jack 45)
+    - 8 Position, 8 Conductor (8P8C)
+    - Modular
+    - Ethernet
+- F-Connector
+    - Coax Cable
+    - Cable television
+    - Cable modem 
+    - DOCSIS (Data Over Cable Service Interface Specification)
+- Punchdown Block
+    - Wire-to-Wire patch panel
+    - Wires punched into block
+    - Punchdown tool
+- USB-C
+    - Best Cable
+    - Lots of power
+- Molex Connector
+    - 4 Pin
+    - AMP mate-n-lok
+    - Provides +12V and +5V
+    - Fan power for PCS
+- Lighting
+    - 8 Pin
+    - Apple shit
+- DB-9 
+    - Common for connecting to interfaces
+    - might need for connecting to serial consoles 
+- ST Straight Tip
+    - Locks in place
+    - Bayonet
+- SC Subscriber Connector
+    - Square
+- LC Lucent Connector
+    - Clip
+## Objective 3.3 Overview of Memory
+- RAM (Random Access Memory)
+    - Temporary high speed storage
+    - more memory, faster the computer
+        - DIMM (Dual Inline Memory Module)
+            - 64 Bit blocks
+- SO-DIMM (Small Outline Dual-Inline Memory Module)
+    - Laptops
+- DRAM (Dynamic RAM)
+    - Needs constant refreshing
+    - Without refreshing data disappears
+    - Random access
+- SDRAM (Synchronous Dynamic Random Access Memory)
+    - Queue up one process while waiting for another 
+    - Synchronous with the clock
+    - Keeps track of data transfer 
+- SDR (Single Data Rate)
+- DDR (Double Data Rate)
+- Parity Memory
+    - Adds an additional parity bit
+    - Error check
+- ECC (Error Correction Code)
+    - Detects errors and corrects on the fly
+    - Not all systems use ECC
+- Even Parity
+    - makes the parity bit an even number
+- Maxium throughput between RAM and CPU
+    - Memory bandwith 
+    - MT/s (Megatransfers)
+    - Faster is better
+- Multi Channel Memory
+    - Same Storage components only (Combination is bad) 
+## Objective 3.4 Storage Devices
+- Storage
+    - SSD
+        - no moving parts
+        - fast
+        - 2.5 inch
+        - 22 mm (NVME)
+    - HDD
+        - Magnetic device
+        - Physical moving parts
+        - RPM
+        - 3.5 Inch
+    - Flash Drive
+        - EEPROM (Electrically erasable programmable read-only memory)
+        - non-volatile memory
+        - Limited number of writes
+    - Memory Cards
+    - Optical Drives
+        - Small bumps with laser beam
+        - Slow
+        - CD-ROM
+        - DVD-ROM
+        - Blu-Ray
+- PCIe Stoarge Interface
+    - High speed for SSD Communication
+    - Connect directly to motherboard
+    - 64 gigabits
+- NVMe (Non-Volatile Memory Express)
+    - Designed for speed
+    - M.2
+        - 20Gbps transfer speed
+- Serial Attached SCSI (Small Computer System Interface)
+    - Different form of port for storage transfer
+- mSATA (Mini-SATA)
+    - Shrinks
+- M.2 interface
+    - Small form factor
+    - B Key
+    - M Key
+- Data Redundancy
+    - RAID (Redundant Array of Independent Disks) or (Redundant Array of Inexpensive Disks)
+        - RAID 0 - Striping
+            - Two physical Drives
+            - Split
+            - High-Performance
+            - No redundancy (Drive failure and your cooked)
+        - RAID 1 - Mirroring
+            - Two physical Drives
+            - Duplicated
+            - High Disk utilization
+            - Redundancy (If drive lost, you have a backup)
+        - RAID 5 - Striping with one parity drive
+            - 4 Physical drives
+            - 3 Data drives
+            - 1 Parity Data drive
+            - Efficient use of disk space
+                - Files arent duplicated
+            - Data is still available after drive failure
+        - RAID 6 - Striping with two parity drives
+            - Same as Raid 5 just adds another Parity block
+            - Could lose two drives and still be ok
+        - RAID 10 - Nested RAID - A stripe of mirrors
+            - Fast, and Safe
+            - 4 Drives
+## Objective 3.5 Motherboards
+- Physical Motherboard size
+- ATX (Advanced Technology Extended)
+    - Large Gaming
+    - 20 - 24 pin connectors
+- microATX (micro Advancted Technology Extended)
+    - Smaller Gaming
+- ITX 
+    - Smallest
+- Computer BUS
+    - Communication
+- PCI (Peripheral Component Interconnect)
+    - 1994
+    - 32Bit slot
+    - 64Bit slot
+    - x1, x2, x4, x8, x16, x32
+- 24 pin connector
+    - 20 + 4 pin cable
+- 6 pin
+    - Graphics cards
+    - 75 watts
+- 8 pin
+    - Graphics cards
+    - 150 watts
+- SATA Connectors
+- Pin headers
+- CPU
+    - Intel
+    - AMD
+- Multisocket
+    - Seperate multiple CPUS
+    - Servers only typically
+- BIOS (Basic Input/Output System)
+    - ROM BIOS
+    - Initializes CPU and Memory
+    - POST (Power on Self Test)
+    - Look for boot loader
+    - You can find the bios chip on your motherboard (reading bios)
+- UEFI
+- BIOS knows your system
+    - BIOS controls aspects of the computer that the internal interface cant
+    - Boot password
+        - Without it, system wont start
+        - Supervisor Password
+    - Temperature monitoring
+- CMOS (Complementtary metal-oxide semiconductor)
+    - Type of memory
+    - Battery
+- HSM (Hardware Security Module)
+    - Key Backup
+    - Stores keys
+    - Cryptographic accelerators
+    - Store information across multiple devices
+- TPM (Trusted Platform Module)
+    - Cryptographic processor
+    - Persistent memory
+    - Versatile memory
+    - Password protected
+        - containts unique secret key
+    - Cant take from one device to another
+    - Root of Trust
+    - Single system
+    - built into motherboard
+- CPU (Centralized Processing Unit)
+    - 32bit 
+        - store 2^32 (Large number)
+        - 1 Billion
+        - x86
+        - 32bit apps stored in \Program Files(x86)
+    - 64bit
+        - store 2^64 (extremely Larger number)
+        - 17 Billion
+        - x64
+        - 64bit apps stored in \Program Files
+- ARM (Advanced RISC Machine)
+    - Efficient
+    - Less power
+    - Less heat
+    - fast
+    - 90% mobile phones use ARM processors
+- Expansion Cards
+    - Sound Card
+        - Highend Audio
+        - Input
+    - Video Card
+        - Graphics
+        - Gaming
+    - Capture Card
+        - Video Capture
+    - Network Interface Card
+        - Motherboard includes typically
+    - Multi Port Ethernet
+    - Drivers is important
+- Cooling
+    - Cool air helps
+    - Computers produce lots of heat
+    - Heat sink
+    - Thermal Paste
+    - Thermal Pad
+        - Worried about leaking
+    - Liquid Cooling
+        - Highend
+        - mineral oil
+## Objective 3.6 Computer power
+- Always disconnect from power source before working on computer
+- Dont connect yourself to electrical of the building
+- DC (Direct Current) Power
+    - 220, 240 volts, 50 hertz
+- AC (Alternating Current) power
+    - 110, 120 volts, 60 hertz
+- Power supplies convert 
+    - AC to DC
+- Amp (Ampere)
+- V (Voltage)
+- W (Watt)
+- Power Supplies will recgonize the power they are connecting to
+- +12 V
+    - PCIe adapters, hard drive motors, cooling fans, most modern components
+- +5 V
+    - Some motherboard components
+    - many use +3.3V
+- 3.3 V 
+    - m.2 slots, ram slots, motherboard logic circuits
+- -12 V
+    - Intergrated LAN
+    - Older Serial Ports
+    - Some PCI cards
+- -5 V
+    - Available for ISA adapter cards
+    - most cards didnt use it
+    - todays motherboards dont have ISA slots
+- 24 pin connector
+- Some power supplies have fixed cables, some dont
+## Objective 3.7 Multifunction Devices
+- MFD (Multifucntion devices)
+    - Printer
+    - Scanner
+    - Fax
+    - Network connection
+    - Phone line connection
+    - Print from web
+- Drivers
+- PCL (Printer Command Language)
+    - hewlett-packard
+- Postscript
+    - Reads document full of postscript and prints
+    - Adobe
+- Drivers need to match the printer
+- Print Server
+    - Print jobs directly to server
+    - Prints job
+- Duplex 
+    - Print both sides
+    - may require additional hardware
+- Tray specific printing
+- Printer security
+    - User Authentication
+    - Badging
+        - Authenticate when using printer
+- Audit logs
+    - Who prints and how much they print
+    - Track money
+## Objective 3.8 Printers
+- Laser Printers
+    - High Voltage
+    - Charged ions
+    - Powdered ink
+    - Heat 
+    - High Quality 
+    - Complex with lots of moving parts
+    - Replace Toner Cartridge
+        - Low doesnt mean empty
+    - Standard maintenance kit
+        - Feed rollers
+        - new fuser unit
+    - Page Counter
+        - how many pages have been printed
+    - Fuser units are hot
+    - Toner bad
+- Inkjet Printers
+    - Quiet 
+    - Good quality
+    - Expensive due to ink
+    - Eventually fades
+    - Clogs
+    - CMYK (Cyan, Magenta, Yellow, Key(black))
+    - ink on print head for some, replacing ink = replacing head
+    - Maintenace
+        - Keep print head clean
+- Thermal Printers
+    - Receipt printers
+    - VERY quiet
+    - no ink
+    - Chemicals built into page
+    - Heat
+    - Heating element
+    - Maintenace
+        - Cant do differnt sizes
+        - Replacing new paper is easy
+        - Cleaning pens for cleaning the heating element
+        - Cleaning card, cleans pathways and heating element
+        - Remove debris
+            - Dust
+- Impact Printers
+    - Dot-matrix printer
+    - presses against ribbion to make mark on paper
+    - good for multiple copies
+    - low cost
+    - noisy
+    - poor graphics
+    - Relatively niche
+    - writing paper transfer
+    - Shipping uses this printer
+    - Tractor Paper
+    - Maintenace
+        - Replacing ribbon
+            - Fades as it wears
+        - Designed to be modular
+        - Print head
+            - Gets hot
+            - Modular
+                - Release lever or bar
+## Objective 4.1 Virtualization Concepts 
