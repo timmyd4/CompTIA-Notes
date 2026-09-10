@@ -47,6 +47,7 @@
     - Cell phones
         - Seperates land into cells
         - Airplane mode disables the phone from connecting to these cellular towers
+        - Sandbox mode only allows the phone to connect to what it has access to
     - 3G Technology
         - 1998
         - GPS
@@ -124,12 +125,14 @@
         - TCP confirms data was recieved
     - UDP (User Datagram Protocol)
         - Connectionless
+            - Because it does not make a connection, it cannot make reliable deliveries
         - Unreliable
             - No error recovery
         - No flow control
         - Low overhead
         - video and voice transfer (Voicemail, phonecalls)
         - DHCP (Dynamic Host Configuration Protocol)
+            - Entire point is that the device needing an assigned IP wont connect manually to anything, its automatic
         - TFTP (Trivial File Transfer Protocol)
         - If data doesnt get through it might just fall through and do nothing
 - IP Address (Trucking heading to Address)
@@ -225,6 +228,7 @@
     - Usually a standard system of file management
         - SMB, Apple OS (AFP)
 - Print Server
+    - Always running for users, without a print server the printer wouldnt know how to print the batches or have a destination to begin with
     - Connect a printer to the network (Provides printing services)
     - Computer is connected to printer
     - Printer has ability to connect to devices
@@ -257,7 +261,7 @@
     - Encryption, Logins, Backups, Log Timestamps
     - Everything needs to work from the same clock
     - NTP Server responds to NTP Client
-- Spame Gateways
+- Spam Gateways
     - Cloud server
     - Determines spam
     - not always accurate
@@ -362,6 +366,11 @@
         - Routers inside switches are called Layer 3 switches
         - LAN, WAN, copper, Fiber
     - Switches
+        - VLANS
+            - Layer 2 Concept
+            - Subnetting
+                - Taking a Big IP address and shaping it into specific categories of data flow (marketing, accoutning, engineering)
+        - PC to Switch to Router
         - Bridges hardware
         - POE (Power over Ethernet) Power phones, or send data
     - Unmanaged Switches
@@ -861,11 +870,14 @@
 ## Objective 3.5 Motherboards
 - Physical Motherboard size
 - ATX (Advanced Technology Extended)
+    - 12 x 9.6 Inches
     - Large Gaming
     - 20 - 24 pin connectors
 - microATX (micro Advancted Technology Extended)
+    - 9.6 x 9.6 Inches
     - Smaller Gaming
 - ITX 
+    - 6.7 x 6.7 Inches
     - Smallest
 - Computer BUS
     - Communication
@@ -1081,3 +1093,172 @@
             - Modular
                 - Release lever or bar
 ## Objective 4.1 Virtualization Concepts 
+- Virtualization
+  - One Phyiscal computer
+    - Multiple Running computers
+- Sandboxing
+  - Isolated Environment
+  - Test
+  - If anything bad happens the VM is the only thing effected
+- Legacy Software Support
+  - Running A VM
+  - Need to run later version of Windows or version of operating software
+- Windows/MacOS/Linux
+  - All support Virtualization
+- Hypervisor
+  - Software that manages the VM
+  - May require a CPU that supports Virtualization
+  - Hardware Management
+    - CPU
+    - Networking
+    - Security
+- Type 1 : Bare Metal
+  - Virtual Machine 1, Virtual Machine 2, Virtual Machine 3 (hierarchy chart for Hypervisor)
+    - Hypervisor
+      - Hardware
+- Type 2 : Hosted 
+  - Virtual Machine A, Virtual Machine B, Virtual Machine C (hierarchy chart for Hypervisor)
+    - Hypervisor
+      - Operating System
+        - Hardware
+- Resource Requirements
+  - Intel : Virtualization Technology (VT)
+  - AMD : AMD-V
+  - Memory
+    - need enough
+  - Storage
+    - need enough
+- Network Requirements
+  - Client-side VMs have their own virtual (internal) networks
+  - Some have Shared IP addresses with the physical host
+    - Uses a private IP address internally
+    - Uses NAT to convert to physical host IP
+  - Bridged Network Address
+    - VM is a device on the physical network
+    - VM Acts as on the same Network
+  - Private address
+    - The VM does not communicate outside the virtual network
+- Hypervisor Security
+  - Hypervisor is a sweet spot for bad guys
+  - VM escape
+    - malware
+    - compromise
+    - Big issue
+    - Access data
+  - Rouge VMs
+    - The attackers try to install their own system
+  - Make your own VM
+- Virtual Desktop Infrastructure (VDI)
+  - Applications run on remote server
+  - Local device is a keyboard, mouse, screen
+  - Desktop as a Service (DAAS)
+  - Dont need much power to run this
+  - Need Something to access it though
+- Application Containerization
+  - Container
+    - Contains everything it needs to run an application
+    - No idea it runs multiple things
+    - only thinks its running
+    - Small
+    - Lightweight
+    - Portable
+- App A, App B, App C (hierarchy chart)
+  - Containerization Software (Docker)
+    - Host OS
+      - Hardware
+## Objective 4.2 Cloud Models
+- Cloud Computing
+  - More than just a hosted computer
+  - Unlimited Resources
+  - Deploys fast
+  - International Scope
+  - Only required Resources
+- Cloud Deployment models
+  - Public
+    - Available to everyone
+  - Private
+    - Your own private data center
+  - Hybrid
+    - mix of public and private
+    - for resource pooling
+- Infrastructure as a Service (IaaS) Or Hardware as a Service (HaaS)
+  - Outsource your equipment
+  - Still responsible for management
+  - Data is out there
+  - Examples
+    - Web Server Providers
+- Software as a Service (SaaS)
+  - On-Demand Software
+  - Central management of data and applications
+  - Data still out there
+  - Complete application offering 
+    - Google mail, Microsoft 365
+- Platform as a Service (PaaS)
+  - No Servers, No Software
+  - Someone handles the platform, you handle the development
+  - You dont have direct control of the data, people, or infrastructure
+  - SalesForce.com
+- Responsiblity Matrix
+    - SaaS
+        - Information and Data **(Customer Managed)**
+        - Devices (Mobile and PC) **(Customer Managed)**
+        - Accounts and Identities **(Customer Managed)**
+        - Identity and Directory Infrastructure (**half**) **(Provider Managed)**
+        - Applications **(Provider Managed)**
+        - Network Controls **(Provider Managed)**
+        - Operating System **(Provider Managed)**
+        - Physical Hosts **(Provider Managed)**
+        - Physical Network **(Provider Managed)**
+        - Physical Datacenter **(Provider Managed)**
+    - PaaS
+        - Information and Data **(Customer Managed)**
+        - Devices (Mobile and PC) **(Customer Managed)**
+        - Accounts and Identities **(Customer Managed)**
+        - Identity and Directory Infrastructure (**half**) **(Provider Managed)**
+        - Applications (**half**) **(Provider Managed)**
+        - Network Controls (**half**) **(Provider Managed)**
+        - Operating System **(Provider Managed)**
+        - Physical Hosts **(Provider Managed)**
+        - Physical Network **(Provider Managed)**
+        - Physical Datacenter **(Provider Managed)**
+    - IaaS
+        - Information and Data **(Customer Managed)**
+        - Devices (Mobile and PC) **(Customer Managed)**
+        - Accounts and Identities **(Customer Managed)**
+        - Identity and Directory Infrastructure **(Customer Managed)**
+        - Applications **(Customer Managed)**
+        - Network Controls **(Customer Managed)**
+        - Operating System **(Customer Managed)**
+        - Physical Hosts **(Provider Managed)**
+        - Physical Network **(Provider Managed)**
+        - Physical Datacenter **(Provider Managed)**
+- Cloud Characteristics
+  - Interal/Private Cloud
+    - Dedicated Resources
+    - Build your own cloud
+    - pay for everything upfront
+    - no ongoing costs
+    - Company uses only
+  - External/Public cloud
+    - Share resources with a public cloud
+    - underlying infrastructure owned by a third party
+    - Cost may be metered or up-front
+    - Pooling
+- Metered utilization
+  - Cost to upload (Ingress traffic cost)
+  - Cost to store
+  - Cost to download (Egress traffic cost)
+- Non-metered utilization
+  - Pay for a block of storage
+  - No cost to upload
+  - No cost to download
+  - Same amount everymonth
+- Scalability
+  - Elasticity
+- Availability
+  - Always available
+- File Sync
+  - Informatin can be duplicated
+- Multitenancy
+  - many different clients are using the same cloud infrastructure
+- 
