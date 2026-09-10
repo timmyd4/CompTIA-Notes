@@ -1262,3 +1262,413 @@
 - Multitenancy
   - many different clients are using the same cloud infrastructure
 ## Objective 5.1 Troubleshooting hardware
+- POST (Power on Self Test)
+  - Test major system components before booting
+  - Failure noted with beeps
+- Blank Screen on boot
+  - Listen for beeps
+  - Bad Video
+  - Bad Ram
+  - Bad CPU
+  - BIOS Configuration issue
+- Bad date
+  - CMOS
+  - Motherboard battery
+- Boot wrong device
+  - Set boot order
+  - Confirm vaild operating system
+- Windows Stop Error
+  - BSOD (Blue Screen of Death)
+  - Important Info will be written, what failed most likley
+  - https://www.windows.com/stopcode
+  - Stop code: 0xc0000135
+  - Just restart, if doesnt work bigger issue
+  - Rollback driver
+  - Try Safe mode
+  - Reseat hardware
+  - Run Hardware Diagnostics
+    - BIOS may have
+- Proprietary crash screens
+  - Every application has their own crash screens
+  - Some are trash and some are informal (Cough cough Javascript)
+  - Screenshot or take picture of error to show or to just remember
+- Blank Screen
+  - Monitor connection
+  - Input selection
+  - Check brightness
+  - Swap monitor
+- No Power
+  - No power at the source
+  - No power from the power supply
+  - multimeter
+  - No POST (bad motherboard?)
+  - Fans spin, but no lights (low voltage?)
+- Sluggish Performance
+  - Task manager
+    - check for usage
+  - Windows Update
+  - Drivers Update
+  - Disk Space
+  - Defragging
+  - Laptops have power saving mode (Performance hit)
+  - Anti-Virus - Anti-Malware scan
+- Overheating
+  - CPUS, GPUS, Memory
+  - Fans, Airflow
+  - Heat sinks
+  - Clean and Clear
+  - HWMonitor
+  - Dusty
+- Electrical Issues
+  - Smoke
+  - Disconnect
+  - Locate visually
+- Random Shutdown (No BSOD)
+  - Event Viewer
+  - Heat related issues
+    - Instant shutdown to avoid damage
+  - Failing hardware
+- Application Crashes
+  - Application stops working
+  - Unhelpful sometimes
+  - Check event viewer
+  - Check reliability Monitor
+  - Reinstall application
+- Unusal noises
+  - Computers should not grind
+  - Loose object
+  - Reinstall
+  - Scraping
+    - Harddrive? 
+  - Clicking
+    - Pathway of fan?
+    - Dusty
+  - Popping
+    - Capacitor
+    - Buldging
+    - Could blow and smoke
+- Inaccurate system date/time
+  - Bad motherboard battery
+  - Bad Battery requires BIOS Configuration on everyboot
+## Objective 5.2 Troubleshooting Storage Devices
+- Read/Write failure
+  - Cannot write to storage
+  - Constant retry
+  - Loud Clicking
+    - if its a harddrive
+- Grinding noises
+  - Spinning drives move quick
+  - One small issue can be major
+  - Poor performance
+- Troublshooting disk failure
+  - Backup
+  - Check for loose cables
+  - Check for overheating
+  - Check power
+  - Run hard drive diagnostics
+    - Run overnight
+- Boot Failure Symptoms
+  - Drive not recognized
+  - Light 
+  - Beeps
+  - Error messages
+  - Operating system not found
+    - The drive is not there
+  - Check cables
+  - Check boot sequence
+  - New? 
+    - Doublecheck everything    
+  - Try new computer
+- Data loss/Corruption
+  - SSD can still be read from
+  - Can be hard to recover
+  - not impossible but hard
+- RAID Failure
+  - Hardware Failure
+  - Power Issue
+  - Communication issue
+  - Error messages
+  - Email notifications 
+  - Audible Alarms
+  - Careful analysis
+  - Important to know what RAID you are repairing
+  - RAID 0
+    - 2 or more drives
+    - Loss of data
+  - RAID 1
+    - 2 or more drives
+    - Array will work as long as one drive is okay
+  - RAID 5
+    - 3 or more
+    - Need all drives, loss of data
+  - RAID 6
+    - 4 or more
+    - only two can fail
+  - RAID 10
+    - 4 or more
+    - can lose all but one set of mirrors
+- S.M.A.R.T (Self-Monitoring, Analysis and Reporting Technology)
+  - third party utilities
+  - Avoid Hardware failure
+  - Schedule disk checks
+  - Warning Signs
+    - Replace Drive
+- Extended read/write times
+  - A lot happens when reading or writing data
+    - memory access, communication
+  - Delays
+  - IOPS (Input/Output operations per second)
+    - A broad metric of maximum performance
+  - Hard drive: 200 IOPS
+  - SSD: 1,000,000 IOPS
+- Missing drives in OS
+  - OS boots normally 
+  - Other drives not shown
+    - check bios
+  - Internal Drives
+    - bad drive or disconnected cable
+  - External Drive
+    - check cables
+  - Network shares
+- Faulty RAID Controller
+## Objective 5.3 Troubleshooting Display Issues
+- Incorrect input source
+  - Check cables
+  - Check if proper connection (motherboard, GPU)
+  - Input selection
+  - Image is dim
+    - Brightness
+  - Swap monitor
+- LCD Projector Bulbs
+  - Bright bulb
+  - 1000 degrees C
+  - Cooling fans
+  - Temperature sensors
+  - Will shut down to avoid damage if to hot
+  - Fan will continue to cool after turn off
+  - Dust air filters
+- Fuzzy Image
+  - LCD Display is fixed
+  - Resolution match displays native resolution
+- Burn-in
+  - Problem across all monitors
+  - Display will pixel-shift
+  - Wont notice most likely
+  - LCDS have problem (Image sticking)
+    - Display white screen overnight
+  - Airlines probably have this issue most
+- Dead Pixels
+  - Always black
+  - Manufacturing defect
+  - Cant fix
+- Flashing Screen
+  - Check the video cable connections
+  - Replace video cable
+  - The problem could be with the monitor
+  - Confirm display settings
+- Incorrect color display
+  - Too blue, Too green
+  - Tint
+  - Custom color presets
+  - Driver Configuration
+  - OS Configuration
+- Audio Issues
+  - Troubleshooting
+  - No sound low volume
+  - Check volume levels
+- Dim Image
+  - Brightness controls
+  - Contrast
+  - Auto Dim
+  - Backlight failure
+    - Replace entire montior
+    - can repair but hard
+- Image Quality problems
+  - Flickering
+  - Check cable pins
+  - Check the OS refresh rate
+  - Need to match display specifications
+  - Disable Hardware Acceleration
+    - Can Cause issues
+- Sizing issue
+  - Display doesnt fit
+  - Scaling
+- Distorted Image
+  - Lines, Flashing, Color Blocks
+  - Hardware failure of Display
+  - Replace Display cable first
+  - Most likley replace display
+  - Could be GPU Issue
+## Objective 5.4 Troubleshooting Mobile Devices
+- Poor Battery Health
+  - Replacing aging battery
+  - Bad Reception
+    - Too much battery usage
+    - Can kill battery
+    - Turn on airplane mode
+  - Disable unnecessary features
+  - Settings to view application usage
+- Swollen Battery
+  - Gas Filled
+  - DO NOT OPEN
+  - Fire risk
+  - Stop Using Immediately
+  - Device can be damaged because of expansion
+- Broken Screen
+  - Replace
+  - Backup
+  - Glass intergrated, have to replace display
+  - Glass is sharp
+- Improper Charging
+  - Cable
+  - Port
+  - Remove Debris
+- Poor or no Connectivity
+  - Cellular or Wi-Fi
+    - Location
+  - Cellular
+    - Signal Strength
+    - Outdoor connectivity may be better
+  - Wi-Fi
+    - Limited Range
+    - Interference
+- Liquid Damage
+  - LCI (Liquid Contact Indicator)
+    - Changes color when liquid comes in-tact
+  - Inside charging or sim port
+  - Power down do not connect to power source
+  - Air out
+  - Bag of rice
+  - Mositure absorbing packets
+- Overheating
+  - Phone will automatically shut down
+  - Check apps
+  - Avoid direct sunlight
+- Digitizer issues
+  - Reset
+  - Screen black
+  - Hold down power button
+  - Button Combinations
+- Physically Damaged Ports
+  - Charging and Data transfer
+  - Rough handling
+  - Not charging
+  - Remove debris or fix damage
+  - Complete replacement
+- Malware
+  - Always a concern
+  - Unusual apps
+  - Anti malware for mobile device
+- Cursor Drift
+  - Older Screens
+  - Bad display or Bad Digitizer
+- Unable to install new applications
+  - Available space
+  - Network connectivity
+  - OS Compatibility
+- Stylus
+  - Power
+- Degraded Performance
+  - Outdated OS
+  - Time to upgrade
+  - Low Storage
+  - Bad RAM
+  - Hardware Issues
+## Objective 5.5 Troubleshooting Networks
+- no Network Connectivity
+  - Link Light?
+  - Ping Loopback (127.0.0.1) <- Localhost
+    - Wont receive ping if problem
+  - Ping local IP address
+  - Ping device outside network
+- Intermittent Wireless connectivity
+  - Signal Strength
+  - Interference
+  - Incorrect Channel
+- Slow Network Speeds
+  - Confirm End-To-End Connectivity
+  - Validate with speed test
+  - Evaluate connectivity on each network loop
+- Limited or no connectivity
+  - Check local IP address
+  - APIPA Address will only have local connectivity
+- Jitter
+  - Most real-time media is sensitive to delay
+  - Data should arrive at regular intervals
+  - How much time is exisits between transfers
+- Poor VOIP quality
+  - Real-Time Applications
+- Port flapping
+  - Network Interface goes up and down
+  - Verify Cable
+  - Replace bad hardware or cables
+- High Latency
+  - Delays between request and response
+- External Interference
+  - Fluorescent Lights
+  - Microwave 
+  - Cordless Telephones
+  - High Power sources
+- Signal to Noise Ratio (SNR)
+- Authentication Issues
+  - Access a resource
+    - Requires the proper credentials
+    - Username password other factors
+## Objective 5.6 Troubleshooting Printers
+- Testing the printer
+  - Print or scan a test page
+  - Built into windows
+  - not the application
+  - Use Diagnostic tools
+- Bad Output
+  - Line down the whole page
+    - Clean print heads
+    - Check for scratched photosensitive drum
+  - Faded print
+    - Low toner
+  - Double/echo images or speckling
+    - Laser printer optical drum not cleaned properly
+    - Previous drum rotation
+- Garbled print
+  - Bad printer Driver
+  - Wrong model
+  - Incorrect page description language
+    - PCL or PostScript
+  - Verify printer functionality
+- Paper Jam
+  - Dont pull the dam paper
+  - Release and take it out,
+  - Clean paper roller tray
+  - Creases
+    - Paper path issue
+- Multiple prints pending in queue
+  - Corrupted print jobs
+  - Print spooler will crash or freeze
+- Grinding Noises
+  - Never a good sound from your printer
+  - Something is not operating propery
+    - Paper jam
+    - etc
+- Finishing Issues
+  - Staple multiple copis
+  - Staple jam
+  - Hole punches
+    - Application issue
+- Incorrect Page Orientation
+  - Print a portrait page
+- Tray not recognized
+  - Office printers have multiple trays
+  - make sure the paper matches the tray size
+- Connectivity Issues
+  - The pritner is a network device
+  - Confirm connection type
+    - narrow down problem
+  - Verify IP address
+  - Check print server
+## COMPTIA PREFERED TROUBLESHOOTING METHOD
+- Identify the problem
+-  Establish a theory
+-  Test the theory
+-  Establish a plan of action
+-  Verify full system functionality
+-  Document findings
