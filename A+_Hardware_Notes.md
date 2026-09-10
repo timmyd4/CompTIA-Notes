@@ -1261,4 +1261,4 @@
   - Informatin can be duplicated
 - Multitenancy
   - many different clients are using the same cloud infrastructure
-- 
+## Objective 5.1 Troubleshooting hardware
