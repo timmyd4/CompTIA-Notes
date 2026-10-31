@@ -195,6 +195,10 @@
         - TCP 143
         - Includes management of email inbox from multiple clients 
         - newer and more functional and controllable
+    - (IMAPS 993)
+        - Secure version of email transfer for IMAP4
+    - (POP3S 995)
+        - Secure version of email transfer for POP3
     - (SMB 445) Server Message Block
         - UDP 137 NetBIOS name Services
         - TCP 139 NetBIOS session Service
