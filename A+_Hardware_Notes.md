@@ -99,6 +99,14 @@
         - Has access to specs, general information, and features that enabled and disabled
         - MDM can control functionality
 ## Objective 2.1 Introduction to IP
+- OSI (Open Systems Interconnection)
+  - 1 Physical
+  - 2 Data Link
+  - 3 Network
+  - 4 Transport
+  - 5 Session
+  - 6 Presentation
+  - 7 Application
 - Networking Domain
 - Series of moving vans
     - Network is the road
@@ -187,7 +195,7 @@
         - TCP 143
         - Includes management of email inbox from multiple clients 
         - newer and more functional and controllable
-    - (SMB 137/139) Server Message Block
+    - (SMB 445) Server Message Block
         - UDP 137 NetBIOS name Services
         - TCP 139 NetBIOS session Service
         - TCP 445 NetBIOS-LESS
@@ -207,8 +215,12 @@
 ## Objective 2.2 Wireless Network Technologies
 - IEEE Standards (Institue of Electrical and Electronic Engineers)
     - 802.11 Committee
-    - 802.11ac (WiFi 5)
-    - 802.11ax (WiFi 6 and WiFi 6E (Extended))
+    - 802.11a (Wireless A) 5ghz, 54mbps
+    - 802.11b (Wireless B) 2.4ghz, 11mbps
+    - 802.11g (Wireless G) 2.4ghz, 54mbps
+    - 802.11n (WiFi 4) 2.4ghz and 5ghz, 300 to 600 mbps
+    - 802.11ac (WiFi 5) 5ghz, 6.9gbps
+    - 802.11ax (WiFi 6 and WiFi 6E (Extended)) 2.4ghz 5ghz 6ghz, 9.6gbps
     - 802.11be (WiFi 7)
     - Different Frequencies (2.4GHz, 5GHz, 6GHz)
     - Bandwidth (20MHz, 40MHz, 80MHz, 160MHz)
@@ -826,7 +838,7 @@
         - CD-ROM
         - DVD-ROM
         - Blu-Ray
-- PCIe Stoarge Interface
+- PCIe (Peripheral Component Interconnect Express) Storage Interface
     - High speed for SSD Communication
     - Connect directly to motherboard
     - 64 gigabits
@@ -869,6 +881,8 @@
             - 4 Drives
 ## Objective 3.5 Motherboards
 - Physical Motherboard size
+- Form Factor
+  - Defined Form Factor (Size)
 - ATX (Advanced Technology Extended)
     - 12 x 9.6 Inches
     - Large Gaming
@@ -888,17 +902,47 @@
     - x1, x2, x4, x8, x16, x32
 - 24 pin connector
     - 20 + 4 pin cable
+    - 300 - 350 Watts
 - 6 pin
     - Graphics cards
-    - 75 watts
+    - 75 Watts
 - 8 pin
     - Graphics cards
-    - 150 watts
+    - 150 Watts
 - SATA Connectors
 - Pin headers
 - CPU
+  - MultiThreading
+    - SMT (Simultaneous Multithreading) or (Hyper-Threading)
+    - Single stream of instructions
+    - 1, 2, 3
+      - Do Thing 1 first
+      - Do Thing 2 Second
+      - Do Thing 3 Third
+        - MultiThreading allows Computers/CPUs to complete instructions Simultaneously
+  - SMP (Symmetric Multiprocessing)
+    - Traditional Ways
+    - Need more than one processor/CPU
+    - Windows Server 2019
+  - Multi-Core Processors
+    - Single CPU with multiple Processors
+    - Analogy: Empty hotel _**(Processing Power)**_, Guests come to hotel _**(Applications or Events that need to be processed)**_, Front-Desk helper says go to whatever empty room there is _**(Processor using multiple cores to process tasks)**_
+  - 4 Core
+  - 8 Core
+  - 16 Core
+  - 32 Core
+  - Some CPUS are Soldered in-Place
+  - ZIF (Zero Insertion Force)
     - Intel
+      - LGA (Land Grid Array)
+      - Pin on Mothboard
+      - VT
+      - EPT (Extended Page Table)
     - AMD
+      - PGA (Pin Grid Array)
+      - Pin on CPU
+      - AMD-V
+      - RVI (Rapid Virtualization Indexing)
 - Multisocket
     - Seperate multiple CPUS
     - Servers only typically
@@ -934,6 +978,17 @@
     - Single system
     - built into motherboard
 - CPU (Centralized Processing Unit)
+  - Processor
+  - FPUs (Floating Point Unit)
+  - ALUs (Accelerating Processing Unit)
+  - x86
+    - Made by Intel
+    - 8-bit, 16-bit, 32-bit
+    - Supports only up to 4GB of RAM
+    - Can only run 32-bit programs 
+  - x64
+    - 64-bit
+    - Can run both 32-bit and 64-bit programs
     - 32bit 
         - store 2^32 (Large number)
         - 1 Billion
@@ -944,12 +999,16 @@
         - 17 Billion
         - x64
         - 64bit apps stored in \Program Files
-- ARM (Advanced RISC Machine)
+- ARM (Advanced RISC (Reduced Instruction Set Computer) Machine)
     - Efficient
     - Less power
     - Less heat
     - fast
     - 90% mobile phones use ARM processors
+    - M Series by Apple
+    - Popular with most devices
+      - Smaller number of Instructions
+      - More with Less
 - Expansion Cards
     - Sound Card
         - Highend Audio
@@ -1667,8 +1726,8 @@
   - Check print server
 ## COMPTIA PREFERED TROUBLESHOOTING METHOD
 - Identify the problem
--  Establish a theory
--  Test the theory
--  Establish a plan of action
--  Verify full system functionality
--  Document findings
+- Establish a theory
+- Test the theory
+- Establish a plan of action
+- Verify full system functionality
+- Document findings
