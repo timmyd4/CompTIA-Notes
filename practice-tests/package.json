@@ -1,0 +1,7 @@
+{
+  "name": "aplus-practice-tests",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CompTIA A+ 220-1201 Core 1 practice tests",
+  "scripts": { "start": "node server.js" }
+}
