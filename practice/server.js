@@ -9,6 +9,7 @@ const files = {
   "/index.html": ["index.html", "text/html"],
   "/app.js": ["app.js", "text/javascript"],
   "/questions.js": ["questions.js", "text/javascript"],
+  "/flashcards.js": ["flashcards.js", "text/javascript"],
 };
 
 http.createServer((req, res) => {
